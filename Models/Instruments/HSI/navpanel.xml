@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>navpanel.ac</path>
+    <animation>
+    <type>rotate</type>
+    <object-name>knob01</object-name>
+     <property>/instrumentation/navcomputer/brg-switch-position</property>
+     <min>1</min>
+     <max>4</max>
+     <scale>1</scale>
+     <interpolation>
+      <entry> <ind> 1</ind> <dep>315</dep> </entry>
+      <entry> <ind> 2</ind> <dep>345</dep> </entry>
+      <entry> <ind> 3</ind> <dep> 15</dep> </entry>
+      <entry> <ind> 4</ind> <dep> 45</dep> </entry>
+     </interpolation>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+    <center>
+     <x-m>0.00193882</x-m>
+     <y-m>-0.0177237</y-m>
+     <z-m>-0.003415</z-m>
+    </center>
+  </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>knob02</object-name>
+     <property>/instrumentation/navcomputer/mode-switch-position</property>
+     <min>1</min>
+     <max>4</max>
+     <scale>1</scale>
+     <interpolation>
+      <entry> <ind> 1</ind> <dep>255</dep> </entry>
+      <entry> <ind> 2</ind> <dep>284</dep> </entry>
+      <entry> <ind> 3</ind> <dep>312</dep> </entry>
+      <entry> <ind> 4</ind> <dep>340</dep> </entry>
+     </interpolation>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+    <center>
+     <x-m>0.00144124</x-m>
+     <y-m> 0.0203593</y-m>
+     <z-m>-0.00104678</z-m>
+    </center>
+  </animation>
+
+<!-- lighting -->
+
+  <animation> 
+   <object-name>faceplate</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+        <red>0.45</red>
+        <green>0.34</green>
+        <blue>0.18</blue>
+      </emission>
+  </animation>
+
+  <animation> 
+   <object-name>knob01</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+        <red>0.45</red>
+        <green>0.34</green>
+        <blue>0.18</blue>
+      </emission>
+  </animation>
+  <animation> 
+   <object-name>knob02</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+        <red>0.45</red>
+        <green>0.34</green>
+        <blue>0.18</blue>
+      </emission>
+  </animation>
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+
+</PropertyList>
