@@ -135,8 +135,6 @@
       <path>Aircraft/E3B/Systems/instrumentation.xml</path>
     </instrumentation>
 		
-    <number-views type="int">7</number-views>
-
     <view>
       <internal archive="y">true</internal>
       <config>
@@ -148,7 +146,7 @@
       </config>
     </view>
     
-    <view n="6">
+    <view n="100">
      <name>Radar View</name>
      <type>lookfrom</type>
      <internal type="bool">true</internal>
