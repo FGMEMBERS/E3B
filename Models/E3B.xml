@@ -1129,7 +1129,7 @@
  <animation>
   <type>translate</type>
   <object-name>lhibflap</object-name>
-  <property>/surface-positions/flap-pos-norm</property>
+  <property>surface-positions/flap-pos-norm</property>
   <factor>0.5</factor>
   <axis>
    <x>1</x>
@@ -1196,7 +1196,7 @@
  <animation>
   <type>translate</type>
   <object-name>rhibflap</object-name>
-  <property>/surface-positions/flap-pos-norm</property>
+  <property>surface-positions/flap-pos-norm</property>
   <factor>0.5</factor>
   <axis>
    <x>1</x>
