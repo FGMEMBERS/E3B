@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery>
+    <name type="string">NATO</name>
+    <texture>E3-1-nato.rgb</texture>
+   </livery>
+   <livery-2>
+    <texture>E3-2-nato.rgb</texture>
+   </livery-2>
+  </model>
+ </sim>
+</PropertyList>

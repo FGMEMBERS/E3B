@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+
+		<description>Boeing E-3B</description>
+		<author type="string">
+			Innis Cunningham, Vivian Meazza, David Culp and Julien Pierru
+		</author>
+		<status>early production</status>
+
+		<flight-model>jsb</flight-model>
+		<aero>E3B</aero>
+		<virtual-cockpit archive="y">true</virtual-cockpit>
+		<allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
+
+		<panel>
+			<visibility>false</visibility>
+		</panel>
+
+		<startup>
+			<splash-texture>Aircraft/E3B/E3B-splash.rgb</splash-texture>
+		</startup>
+
+		<gui>
+			<style>
+				<colors>
+					<splash-screen>
+						<red>0</red>
+						<green>0</green>
+						<blue>0</blue>
+					</splash-screen>
+					<splash-font>
+						<red>0.76</red>
+						<blue>0.76</blue>
+						<green>0.76</green>
+					</splash-font>
+				</colors>
+			</style>
+		</gui>
+
+		<systems>
+			<autopilot>
+				<path>Aircraft/E3B/Systems/autopilot.xml</path>
+			</autopilot>
+			<electrical>
+				<path>Aircraft/E3B/Systems/electrical.xml</path>
+			</electrical>
+		</systems>
+
+		<sound>
+			<audible>true</audible>
+			<path>Aircraft/E3B/Sounds/737-sound.xml</path>
+		</sound>
+
+		<panel>
+			<path>Aircraft/E3B/Panels/737-ifr-panel.xml</path>
+			<visibility>true</visibility>
+		</panel>
+
+		<submodels>
+			<serviceable>true</serviceable>
+			<path>Aircraft/E3B/submodels.xml</path>
+		</submodels>
+
+		<model>
+			<path>Aircraft/E3B/Models/E3B.xml</path>
+			<e3b>
+				<material>
+					<tailBeacon>
+						<diffuse>
+							<red>0.8</red>
+							<green>0.0</green>
+							<blue>0.0</blue>
+						</diffuse>
+
+						<ambient>
+							<red>0.8</red>
+							<green>0.0</green>
+							<blue>0.0</blue>
+						</ambient>
+
+						<specular>
+							<red>0.063</red>
+							<green>0.063</green>
+							<blue>0.063</blue>
+						</specular>
+
+						<emission>
+							<red>0.0</red>
+							<green>0.0</green>
+							<blue>0.0</blue>
+						</emission>
+
+						<transparency>
+							<alpha>1.0</alpha>
+						</transparency>
+
+						<shininess>10</shininess>
+					</tailBeacon>
+					<bellyBeacon>
+						<diffuse>
+							<red>0.8</red>
+							<green>0.0</green>
+							<blue>0.0</blue>
+						</diffuse>
+
+						<ambient>
+							<red>0.8</red>
+							<green>0.0</green>
+							<blue>0.0</blue>
+						</ambient>
+
+						<specular>
+							<red>0.063</red>
+							<green>0.063</green>
+							<blue>0.063</blue>
+						</specular>
+
+						<emission>
+							<red>0.0</red>
+							<green>0.0</green>
+							<blue>0.0</blue>
+						</emission>
+
+						<transparency>
+							<alpha>1.0</alpha>
+						</transparency>
+
+						<shininess>10</shininess>
+					</bellyBeacon>
+				</material>
+			</e3b>
+			<livery>
+				<file type="string"/>
+			</livery>
+		</model>
+
+		<instrumentation>
+			<path>Aircraft/E3B/Systems/instrumentation.xml</path>
+		</instrumentation>
+
+		<view>
+			<internal archive="y">true</internal>
+			<config>
+				<!-- x/y/z == right/up/back -->
+				<x-offset-m archive="y">-0.4</x-offset-m>
+				<y-offset-m archive="y">1.25</y-offset-m>
+				<z-offset-m archive="y">-18.1</z-offset-m>
+				<pitch-offset-deg archive="y">-12.0</pitch-offset-deg>
+			</config>
+		</view>
+
+		<view n="100">
+			<name>Radar View</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+				<x-offset-m archive="y">0.16</x-offset-m>
+				<!-- right/left -->
+				<y-offset-m archive="y">1.5</y-offset-m>
+				<!-- up/down -->
+				<z-offset-m archive="y"
+										type="double">2.5</z-offset-m>
+				<!-- aft/fore -->
+				<pitch-offset-deg>-20.0</pitch-offset-deg>
+				<heading-offset-deg>0</heading-offset-deg>
+			</config>
+		</view>
+
+		<chase-distance-m>-70</chase-distance-m>
+
+		<!-- turns off GA tower communications -->
+		<ATC>
+			<enabled type="bool">false</enabled>
+		</ATC>
+
+		<flaps>
+			<setting>0.00</setting>
+			<setting>0.15</setting>
+			<setting>0.30</setting>
+			<setting>0.40</setting>
+			<setting>0.60</setting>
+			<setting>0.80</setting>
+			<setting>1.00</setting>
+		</flaps>
+
+		<menubar>
+			<default>
+				<menu n="10">
+					<label>Boeing E-3B</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>aircraft.livery.dialog.toggle()</script>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+
+	</sim>
+
+	<engines>
+		<engine n="0">
+			<running>true</running>
+		</engine>
+		<engine n="1">
+			<running>true</running>
+		</engine>
+		<engine n="2">
+			<running>true</running>
+		</engine>
+		<engine n="3">
+			<running>true</running>
+		</engine>
+	</engines>
+
+	<radios>
+		<dme>
+			<switch-position>1</switch-position>
+		</dme>
+	</radios>
+
+	<autopilot>
+		<config>
+			<min-climb-speed-kt type="float">150.0</min-climb-speed-kt>
+			<best-climb-speed-kt type="float">300.0</best-climb-speed-kt>
+			<target-climb-rate-fpm type="float">2000.0</target-climb-rate-fpm>
+			<target-descent-rate-fpm type="float">1500.0</target-descent-rate-fpm>
+			<elevator-adj-factor type="float">3500</elevator-adj-factor>
+			<integral-contribution type="float">0.001</integral-contribution>
+			<zero-pitch-throttle type="float">0.0001</zero-pitch-throttle>
+			<zero-pitch-trim-full-throttle type="float">0.0001</zero-pitch-trim-full-throttle>
+			<max-roll-deg type="float">30</max-roll-deg>
+			<max-aileron type="float">1.0</max-aileron>
+		</config>
+		<settings>
+			<target-bank-deg>10.0</target-bank-deg>
+		</settings>
+	</autopilot>
+
+	<instrumentation>
+		<navcomputer>
+			<brg-switch-position>1</brg-switch-position>
+			<mode-switch-position>1</mode-switch-position>
+		</navcomputer>
+		<radar>
+			<range type="int"
+						 archive="y">20</range>
+			<range-factor type="double"
+										archive="n">0.001888</range-factor>
+			<minimized type="bool"
+								 archive="y">false</minimized>
+		</radar>
+	</instrumentation>
+
+	<controls>
+		<autoflight>
+			<display-mach type="bool">false</display-mach>
+		</autoflight>
+		<radome type="float">12</radome>
+		<flight>
+			<elevator-trim>-0.18</elevator-trim>
+		</flight>
+	</controls>
+
+	<nasal>
+		<aar>
+			<file>Aircraft/E3B/Nasal/aar.nas</file>
+		</aar>
+		<BoeingE3B>
+			<file>Aircraft/E3B/Nasal/liveries.nas</file>
+		</BoeingE3B>
+	</nasal>
+
+	<environment>
+		<params>
+			<contrail-altitude type="double">35000</contrail-altitude>
+		</params>
+	</environment>
+
+</PropertyList>

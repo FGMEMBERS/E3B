@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery>
+    <name type="string">USAF</name>
+    <texture>E3-1.rgb</texture>
+   </livery>
+   <livery-2>
+    <texture>E3-2.rgb</texture>
+   </livery-2>
+  </model>
+ </sim>
+</PropertyList>
