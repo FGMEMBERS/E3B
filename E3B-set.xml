@@ -8,6 +8,21 @@
 		</author>
 		<status>early production</status>
 
+		<tags>
+			<tag>boeing</tag>
+			<tag>1970s</tag>
+			<tag>1980s</tag>
+			<tag>1990s</tag>
+			<tag>2000s</tag>
+			<tag>2010s</tag>
+			<tag>coldwar</tag>
+			<tag>gulfwar1</tag>
+			<tag>gulfwar2</tag>
+			<tag>ifr</tag>
+			<tag>retractable-gear</tag>
+			<tag>jet</tag>
+		</tags>
+
 		<flight-model>jsb</flight-model>
 		<aero>E3B</aero>
 		<virtual-cockpit archive="y">true</virtual-cockpit>
